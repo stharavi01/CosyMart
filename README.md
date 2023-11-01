@@ -5,7 +5,7 @@
 
 
 
-Try to work on one challenge at a time and observe my solution.
+
 This approach will make it easier later to identify any potential bugs.
 
 ## Challenge (1) - Setup
