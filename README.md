@@ -6,7 +6,7 @@
 
 
 
-This approach will make it easier later to identify any potential bugs.
+
 
 ## Challenge (1) - Setup
 
