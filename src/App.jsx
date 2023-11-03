@@ -14,11 +14,16 @@ import {
 	SingleProduct,
 } from "./pages";
 
+import { ErrorElement } from "./components";
+
+import { loader as landingLoader } from "./pages/Landing";
+
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <HomeLayout />,
-		errorElement: <Error />,
+		errorElement: <ErrorElement />,
+		loader: landingLoader,
 		children: [
 			{
 				index: true,
