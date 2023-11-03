@@ -2,13 +2,30 @@ import { BsCart3, BsMoonFill, BsSunFill } from "react-icons/bs";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import NavLinks from "./NavLinks";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const themes = {
+	autumn: "autumn",
+	dracula: "dracula",
+};
+
+const getThemeForLocalStorage = () => {
+	return localStorage.getItem("theme") || themes.autumn;
+};
 
 const Navbar = () => {
-	const [theme, setTheme] = useState(false);
+	const [theme, setTheme] = useState(getThemeForLocalStorage());
 	const handleTheme = () => {
-		setTheme(!theme);
+		const { autumn, dracula } = themes;
+		const newTheme = theme === autumn ? dracula : autumn;
+		setTheme(newTheme);
 	};
+
+	useEffect(() => {
+		document.documentElement.setAttribute("data-theme", theme);
+		localStorage.setItem("theme", theme);
+	}, [theme]);
+
 	return (
 		<nav className="bg-base-200">
 			<div className="navbar align-element">
