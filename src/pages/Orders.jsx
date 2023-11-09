@@ -1,13 +1,17 @@
 import { redirect, useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
 import { customFetch } from "../utils";
-import { OrdersList, PaginationContainer, SectionTitle } from "../components";
+import {
+	OrdersList,
+	ComplexPaginationContainer,
+	SectionTitle,
+} from "../components";
 
 export const loader =
-	() =>
 	(store) =>
 	async ({ request }) => {
 		const user = store.getState().userState.user;
+
 		if (!user) {
 			toast.warn("You must be logged in to view orders");
 			return redirect("/login");
@@ -15,14 +19,14 @@ export const loader =
 		const params = Object.fromEntries([
 			...new URL(request.url).searchParams.entries(),
 		]);
-
 		try {
 			const response = await customFetch.get("/orders", {
 				params,
 				headers: {
-					Authorization: `Bearen ${user.token}`,
+					Authorization: `Bearer ${user.token}`,
 				},
 			});
+
 			return { orders: response.data.data, meta: response.data.meta };
 		} catch (error) {
 			console.log(error);
@@ -39,6 +43,17 @@ export const loader =
 	};
 
 const Orders = () => {
-	return <h1>Orders</h1>;
+	const { meta } = useLoaderData();
+	if (meta.pagination.total < 1) {
+		return <SectionTitle text="Please make an order" />;
+	}
+	return (
+		<>
+			<SectionTitle text="Your Orders" />
+			<OrdersList />
+			<ComplexPaginationContainer />
+		</>
+	);
 };
+
 export default Orders;
