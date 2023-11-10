@@ -13,11 +13,16 @@ const About = () => {
 					</div>
 				</div>
 			</div>
-			<p className="mt-6 text-lg leading-8 max-w-2xl mx-auto">
-				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, sit
-				natus. Tenetur, neque. Accusamus, ullam corrupti ducimus sunt, eligendi
-				illum nulla nihil itaque rem at tempora, veritatis mollitia ipsa
-				nesciunt!
+			<p className="mt-10 text-lg leading-8 max-w-2xl mx-auto">
+				Welcome to Cozy Mart, where we redefine the art of living with our
+				curated selection of exquisite home furnishings. Our diverse range
+				includes everything from stylish chairs and innovative lamps to
+				luxurious beds, functional shelves, and comfortable sofas, sourced from
+				renowned companies. At Cozy Mart, we prioritize not only aesthetics but
+				also quality and comfort, ensuring that every piece reflects our
+				commitment to enhancing your home ambiance. Explore our collection and
+				embark on a journey to transform your living spaces into havens of
+				comfort and style.
 			</p>
 		</>
 	);

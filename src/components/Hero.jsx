@@ -15,10 +15,9 @@ const Hero = () => {
 					We are changing the way people shop
 				</h1>
 				<p className="mt-8 max-w-1xl text-lg leading-8">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, in.
-					Animi fugiat impedit consequuntur, id repellat quae eveniet dolores ab
-					beatae amet, possimus repudiandae, culpa ipsam. Libero aperiam magni
-					ad!
+					Discover Comfort, Embrace Style at Cozy Mart – Your One-Stop Home
+					Essentials Destination. Elevate Your Living Experience with Quality
+					Furniture and Décor. Where Fashion Meets Functionality!
 				</p>
 				<div className="mt-10">
 					<Link to="/products" className="btn btn-primary">
