@@ -4796,7 +4796,7 @@ const allProductsQuery = (queryParams) => {
     queryFn: () =>
       customFetch(url, {
         params: queryParams,
-      }),
+      }), 
   };
 };
 
