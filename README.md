@@ -1,4 +1,4 @@
-# Project Name
+# CozyMart
 
 Welcome to the CozyMart! This project is a web application designed with modern web development practices and technologies. It leverages a combination of front-end and back-end tools to create a robust and user-friendly experience. The project includes various components and pages that demonstrate the versatility and power of the chosen tech stack. Key features and technologies used in the project include:
 
